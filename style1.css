@@ -1,0 +1,38 @@
+
+
+label{
+
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+   
+
+}
+label > span{
+
+    float:left ;
+    width: 100px;
+    color: #F072A9;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+	
+
+}
+
+
+
+
+
+input[type=text]{
+
+    
+    
+    box-sizing: border-box;
+    
+    
+    
+   
+
+}
+
