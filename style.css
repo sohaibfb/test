@@ -64,7 +64,7 @@ height: 100%;
 flex-direction: row;
 
 }
-.settingsbodydata{
+.settingsbody{
 
     flex-grow: 1;
     border: none; 
@@ -72,6 +72,22 @@ flex-direction: row;
     padding: 0;
 
 
+}
+.subsettingsheader{
+
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+}
+.subsettingsbody{
+
+    flex-grow: 1;
+    border: none; 
+    margin: 0; 
+    padding: 0;
 }
 
 
@@ -103,6 +119,14 @@ flex-direction: row;
 
 
     }
+
+    .subsettingsmainmenu a{
+      
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+    }
+    
 
      
    
