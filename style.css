@@ -25,6 +25,10 @@ H1{
        background:lightgray;
        
    }
+   tbody{
+    border-bottom:1px solid lightgray;
+
+   }
    tr{
 
    border-bottom:1px solid lightgray;
@@ -225,6 +229,12 @@ flex-direction: row;
     color: black;
     cursor: pointer;
     font-weight: bold;
+
+}
+.actionbar{
+
+    margin:16px;
+    padding: 8px;
 
 }
 
