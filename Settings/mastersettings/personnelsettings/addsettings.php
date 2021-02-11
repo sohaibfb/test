@@ -11,12 +11,12 @@ $conn=new mysqli($host,$user,$passwd,$database);
 if($conn->connect_error){
 
     die("connection failed :".$conn->connect_error);
-}
+  }
 
 
   
 
- elseif(isset($_POST['submit'])){
+if(isset($_POST['submit'])){
 
 
  $engdesc=$_POST['engdesctext'];
@@ -31,12 +31,12 @@ if($conn->connect_error){
 
  if($conn->query($sql1)===true){
     header("Location:/test/settings/mastersettings/personnelsettings/Nationality.php");
-}
+   }
  
-else {
+ else {
     header("Location:/test/Employee Profile.php");//"Location:/test/mastersettings/personnelsettings/addSettings.php";
     echo "Error: " . $sql . "<br>" . $conn->error;
- }
+   }
 
 }
 

@@ -12,7 +12,7 @@
             
         <div class="actionbar"  ><image id="addnationalitysettingsbtn"  height="35" src="../../../images/images.png" width="52" />
 
-        <input id='addsetttingbtn' name="save" type="submit" value="save"  height="35"  width="52"  /></div>
+        <input id='addsetttingbtn' name="submit" type="submit" value="save"  height="35"  width="52"  /></div>
             
 
         
@@ -39,7 +39,7 @@
     </tr>
     </tbody>
     
- </table>
+   </table>
  
  <div name="ShowEmployeeData" id="data"></div>
 
