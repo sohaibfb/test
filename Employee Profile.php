@@ -35,9 +35,9 @@
 				
 				
 				<!--ID-->
-				<label for=""><span>ID<span class="required">*</span></span><input name="EID" type="text" /></label>	
+				<label for=""><span>ID:<span class="required">*</span></span><input name="EID" type="text" /></label>	
 				
-			    <!--Name-->
+			  <!--Name-->
 				<label for=""><span>Name :<span class="required">*</span></span><input name="FirstName" type="text" placeholder="First Name"  />
 				<input name="SecondName" type="text" placeholder="Second Name" />
 				<input name="ThirdName" type="text" placeholder="Third Name"/>
@@ -51,11 +51,28 @@
                  <option value="3">Saudi</option>
                   </select></label>
 
+
+      	<!--Home Country-->
+				 <label for=""><span>Home Country:</span><select name="HomeCountry">
+				 <option value="0" selected>Choose</option>
+                 <option value="1">Jordan</option>
+                 <option value="2">Lebanon</option>
+                 <option value="3">Saudi</option>
+                  </select></label>
+
                  <!--Gender-->
                  <label for=""><span>Gender :</span><select name="Gender">
                  <option value="0" selected>Choose</option>
                  <option value="1">male</option>
                  <option value="2">Female</option>
+                 </select></label>
+
+
+                 <!--Religin-->
+                 <label for=""><span>Religion :</span><select name="Religion">
+                 <option value="0" selected>Choose</option>
+                 <option value="1">Muslim</option>
+                 <option value="2">not muslim</option>
                  </select></label>
                  
                   <!--Marital Status-->
@@ -65,7 +82,13 @@
                  <option value="2">Married</option>
                  <option value="3">Divorced</option>
                  </select></label>
-	
+  
+                 
+                 <!--birthday Date-->
+                 <label for=""><span>Birthday Date:<span class="required">*</span></span><input name="BirthdayDate" type="date" /></label>
+
+                 <!--Mobile-->
+                 <label for=""><span>Mobile:<span class="required">*</span></span><input name="Mobile" type="tel" placeholder="Mobile" />
 			</fieldset>
 	
 
