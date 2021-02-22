@@ -24,10 +24,13 @@ if(isset($_POST['submit'])){
  $scode=$_POST['scode'];
 
 
-$sql1="select max(code) from code_setup where code_type='$scode' ";
+//$sql1="select code from code_setup where code_type=1 ";
+$sql1 = "SELECT max(code) from code_setup where code_type='$scode'";
+
 $code='0';
-if($conn->query($sql1)===true){
 $result=$conn->query($sql1);
+if($result==true){
+
   if( $result->num_rows>0){
     $row=$result->fetch_assoc();
     $code=$row["max(code)"];
@@ -55,7 +58,7 @@ $result=$conn->query($sql1);
 }
 else
 {
-  echo "Error: " . $sql1 . "<br>" . $conn->error;
+    echo "Error: " . $sql1. "<br>" .$conn ->error;
 }
 
 }

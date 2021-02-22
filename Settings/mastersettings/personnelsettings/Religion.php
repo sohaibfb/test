@@ -13,6 +13,7 @@
         <div class="actionbar"  ><image id="addnationalitysettingsbtn"  height="35" src="../../../images/images.png" width="52" />
 
         <input id='addsetttingbtn' name="submit" type="submit" value="save"  height="35"  width="52"  /></div>
+        <input name='scode' type="hidden" value="2">
             
 
         
