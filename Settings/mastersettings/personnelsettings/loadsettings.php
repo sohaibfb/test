@@ -23,7 +23,9 @@ if($conn->connect_error){
 
  else{
 
-$sql = "select code,english_description,Arabic_description from code_setup WHERE code_type=1";
+    if(isset($_POST['code'])){
+$code=$_POST['code'];
+$sql = "select code,english_description,Arabic_description from code_setup WHERE code_type='$code'";
 
 $result=$conn->query($sql);
 if ($result == TRUE) {
@@ -46,9 +48,13 @@ while($row=$result->fetch_assoc()){
 }
 }
 }
-
+    }
+    else
+    {
+        echo 'error';
+    }
  }
-
+ 
 
 $conn->close();
 

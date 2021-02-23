@@ -7,14 +7,15 @@
 </head>
 <body>
 <div class="subsettingsheader">
-  
   <form class="form-style-3" action="addsettings.php" method="post" >
     
             
         <div class="actionbar"  ><image id="addsettingsbtn"  height="35" src="../../../images/images.png" width="52" />
 
-        <input id='addsetttingbtn' name="submit" type="submit" value="save"  height="35"  width="52"  /></div>    
-        <input name='scode' id='scode' type="hidden" value="1">
+        <input id='addsetttingbtn' name="submit" type="submit" value="save"  height="35"  width="52"  /></div>
+        <input name='scode' id='scode' type="hidden" value="3">
+            
+
         
      
      

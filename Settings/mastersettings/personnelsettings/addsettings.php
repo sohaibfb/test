@@ -48,11 +48,23 @@ if($result==true){
  
 
  if($conn->query($sql2)===true){
+   switch($scode)
+   {
+   case 1 : 
     header("Location:/test/settings/mastersettings/personnelsettings/Nationality.html");
+    
+    break;
+    case 2 :
+    header("Location:/test/settings/mastersettings/personnelsettings/Religion.php");
+    break;
+    case 3 :
+      header("Location:/test/settings/mastersettings/personnelsettings/HomeCountry.php");
+      break;
+   }
    }
  
  else {
-    header("Location:/test/Employee Profile.php");//"Location:/test/mastersettings/personnelsettings/addSettings.php";
+    header("Location:/test/Employee Profile.php");
     echo "Error: " . $sql2 . "<br>" . $conn->error;
    }
 }
