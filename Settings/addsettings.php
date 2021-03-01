@@ -55,10 +55,13 @@ if($result==true){
     
     break;
     case 2 :
-    header("Location:/test/settings/mastersettings/personnelsettings/Religion.php");
+    header("Location:/test/settings/mastersettings/personnelsettings/Religion.html");
     break;
     case 3 :
-      header("Location:/test/settings/mastersettings/personnelsettings/HomeCountry.php");
+      header("Location:/test/settings/mastersettings/personnelsettings/HomeCountry.html");
+      break;
+    case 4 :
+      header("Location:/test/settings/mastersettings/employementsettings/positions.html");
       break;
    }
    }

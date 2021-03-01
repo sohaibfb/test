@@ -17,7 +17,7 @@ data.append('code',Value);
       
   };
   
-  xhttp.open("POST","loadsettings.php",true);
+  xhttp.open("POST","../../loadsettings.php",true);
   xhttp.send(data);
   
   }
