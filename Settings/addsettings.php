@@ -63,6 +63,15 @@ if($result==true){
     case 4 :
       header("Location:/test/settings/mastersettings/employementsettings/positions.html");
       break;
+    case 5 :
+      header("Location:/test/settings/mastersettings/structuresettings/Functions.html");
+      break;
+    case 6 :
+      header("Location:/test/settings/mastersettings/structuresettings/Sections.html");
+      break;
+    case 7 :
+      header("Location:/test/settings/mastersettings/structuresettings/Locations.html");
+      break;
    }
    }
  
