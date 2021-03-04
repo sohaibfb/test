@@ -76,7 +76,7 @@ if($result==true){
    }
  
  else {
-    header("Location:/test/Employee Profile.php");
+   // header("Location:/test/Employee Profile.php");
     echo "Error: " . $sql2 . "<br>" . $conn->error;
    }
 }

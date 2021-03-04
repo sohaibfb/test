@@ -35,15 +35,17 @@ btn.onclick = function() {
  // cell1.innerHTML="<input type='text'/>"
   var cell2=row.insertCell(1);
   var cell3;
+  var functionflag=0;
   var functionflag= document.getElementById('functionflag').value;
+  document.ge
   if(functionflag==1){
-   cell3=row.insertCell(4);
+   cell3=row.insertCell(2);
    var xhttpdepartment=new XMLHttpRequest(); 
    xhttpdepartment.onreadystatechange=function() {
   
     if(this.readyState==4 && this.status==200){
 
-      cell3.innerHTML="<input type='text', name='arabicdesctext11'/>";
+      cell3.innerHTML=this.responseText;  //"<input type='text', name='arabicdesctext11'/>";
        
     }
 
@@ -52,8 +54,8 @@ btn.onclick = function() {
   xhttpdepartment.open("POST","../../loaddepartmentsettings.php",true);
   xhttpdepartment.send();
   }
-  var cell4=row.insertCell(2);
-  var cell5=row.insertCell(3);
+  var cell4=row.insertCell(-1);
+  var cell5=row.insertCell(-1);
   cell4.innerHTML="<input type='text', name='engdesctext'/>";  
   
   cell5.innerHTML="<input type='text', name='arabicdesctext'/>";
