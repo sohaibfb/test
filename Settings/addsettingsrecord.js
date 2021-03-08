@@ -1,7 +1,10 @@
-﻿window.onload=function(){
+﻿var functionflag=0;
+window.onload=function(){
 var data=new FormData();
 var Value= document.getElementById('scode').value;
+functionflag= document.getElementById('functionflag').value;
 data.append('code',Value);
+data.append('functionflag',functionflag);
 
   var xhttp=new this.XMLHttpRequest();
   
@@ -36,7 +39,7 @@ btn.onclick = function() {
   var cell2=row.insertCell(1);
   var cell3;
   var functionflag=0;
-  var functionflag= document.getElementById('functionflag').value;
+  functionflag= document.getElementById('functionflag').value;
   document.ge
   if(functionflag==1){
    cell3=row.insertCell(2);

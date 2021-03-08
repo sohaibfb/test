@@ -22,12 +22,13 @@ if(isset($_POST['submit'])){
  $engdesc=$_POST['engdesctext'];
  $arabicdesc=$_POST['arabicdesctext'];
  $scode=$_POST['scode'];
+ $relatedcode=$_POST['function'];
+ $code='1';
+ $relatecode='0';
 
 
-//$sql1="select code from code_setup where code_type=1 ";
 $sql1 = "SELECT max(code) from code_setup where code_type='$scode'";
 
-$code='0';
 $result=$conn->query($sql1);
 if($result==true){
 
@@ -36,18 +37,26 @@ if($result==true){
     $code=$row["max(code)"];
     $code=$code+1;
   }
-  else{
-    $code=1;
+
+   
+ $sql2= "SELECT code from code_setup where english_description='$relatedcode'"; 
+ 
+ $functionresult=$conn->query($sql2);
+if($functionresult==true){
+
+  if($functionresult->num_rows>0){
+    $functionrow=$result->fetch_assoc();
+    $relatecode=$row["code"];
   }
-
   
-  
+ 
+   
 
- $sql2= "INSERT INTO code_setup(code_type,code,english_description,arabic_description) VALUES ('$scode','$code','$engdesc','$arabicdesc')";
+ $sql3= "INSERT INTO code_setup(code_type,code,related_code,english_description,arabic_description) VALUES ('$scode','$code','$relatecode','$engdesc','$arabicdesc')";
 
  
 
- if($conn->query($sql2)===true){
+ if($conn->query($sql3)===true){
    switch($scode)
    {
    case 1 : 
@@ -77,9 +86,18 @@ if($result==true){
  
  else {
    // header("Location:/test/Employee Profile.php");
-    echo "Error: " . $sql2 . "<br>" . $conn->error;
+    echo "Error: " . $sql3 . "<br>" . $conn->error;
    }
+
+  }
+  else
+{
+    echo "Error: " . $sql2. "<br>" .$conn ->error;
 }
+  
+}
+
+
 else
 {
     echo "Error: " . $sql1. "<br>" .$conn ->error;

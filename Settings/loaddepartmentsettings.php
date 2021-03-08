@@ -36,7 +36,7 @@ while($row=$result->fetch_assoc()){
    
    
 
-    echo "<option value='english'>".$row['english_description']."</option>";
+    echo "<option value='".$row['english_description']."'>".$row['english_description']."</option>";
     
 
    

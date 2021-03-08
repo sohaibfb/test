@@ -23,27 +23,39 @@ if($conn->connect_error){
 
  else{
 
-    if(isset($_POST['code'])){
+    if(isset($_POST['code']) and isset($_POST['functionflag'])){
 $code=$_POST['code'];
-$sql = "select code,english_description,Arabic_description from code_setup WHERE code_type='$code'";
+$functionflag=$_POST['functionflag'];
+$sql = "select code,related_code,english_description,Arabic_description from code_setup WHERE code_type='$code'";
 
 $result=$conn->query($sql);
 if ($result == TRUE) {
     
     if( $result->num_rows>0){
-
-        
-     
+if($functionflag==1){
 while($row=$result->fetch_assoc()){
    
+    echo "<tr>";
+    echo "<td><input type='checkbox', name='engdecctext'/></td>";
+    echo "<td>".$row["code"]."</td>";
+    echo "<td>".$row["elated_code"]."</td>";
+    echo "<td>".$row["english_description"]."</td>";
+    echo "<td>".$row["Arabic_description"]."</td>";
+    echo "</tr>";
+    
+   
+
+}
+}
+else{
+
     echo "<tr>";
     echo "<td><input type='checkbox', name='engdecctext'/></td>";
     echo "<td>".$row["code"]."</td>";
     echo "<td>".$row["english_description"]."</td>";
     echo "<td>".$row["Arabic_description"]."</td>";
     echo "</tr>";
-    
-   
+
 
 }
 }
