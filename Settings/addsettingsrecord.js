@@ -1,10 +1,19 @@
-﻿var functionflag=0;
+﻿//var functionflag;
 window.onload=function(){
 var data=new FormData();
 var Value= document.getElementById('scode').value;
-functionflag= document.getElementById('functionflag').value;
+
+
 data.append('code',Value);
-data.append('functionflag',functionflag);
+//if(document.getElementById('functionflag').value!=null){
+  //functionflag=document.getElementById('functionflag').value;
+//data.append('functionflag',functionflag);
+//}
+//else{
+ // functionflag=0;
+  //data.append('functionflag',functionflag);
+
+//}
 
   var xhttp=new this.XMLHttpRequest();
   
