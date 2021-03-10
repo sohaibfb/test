@@ -39,20 +39,20 @@ if($result==true){
   }
 
    
- $sql2= "SELECT code from code_setup where english_description='$relatedcode'"; 
+ $sql2= "SELECT code from code_setup where english_description='$relatedcode' and code_type='5'"; 
  
  $functionresult=$conn->query($sql2);
 if($functionresult==true){
 
   if($functionresult->num_rows>0){
     $functionrow=$result->fetch_assoc();
-    $relatecode=$row["code"];
+    $relatecode=$functionrow["code"];
   }
   
  
    
 
- $sql3= "INSERT INTO code_setup(code_type,code,related_code,english_description,arabic_description) VALUES ('$scode','$code','$relatecode','$engdesc','$arabicdesc')";
+ $sql3= "INSERT INTO code_setup(code_type,code,related_code,english_description,arabic_description) VALUES ('$scode','$code','1','$engdesc','$arabicdesc')";
 
  
 
