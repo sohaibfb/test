@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
  $scode=$_POST['scode'];
  $relatedcode=$_POST['function'];
  $code='1';
- $relatecode='0';
+ $relatecode='2';
 
 
 $sql1 = "SELECT max(code) from code_setup where code_type='$scode'";
@@ -45,8 +45,8 @@ if($result==true){
 if($functionresult==true){
 
   if($functionresult->num_rows>0){
-    $functionrow=$result->fetch_assoc();
-    $relatecode=$row["code"];
+    $functionrow=$functionresult->fetch_assoc();
+    $relatecode=$functionrow["code"];
   }
   
  
