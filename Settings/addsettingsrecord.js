@@ -1,7 +1,8 @@
 ﻿//var functionflag;
+var Value= document.getElementById('scode').value;
 window.onload=function(){
 var data=new FormData();
-var Value= document.getElementById('scode').value;
+//var Value= document.getElementById('scode').value;
 
 
 data.append('code',Value);
@@ -41,16 +42,17 @@ var btn = document.getElementById("addsettingsbtn");
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
+
   var table =document.getElementById("tbody");
   var row = table.insertRow();
   var cell1=row.insertCell(0);
  // cell1.innerHTML="<input type='text'/>"
   var cell2=row.insertCell(1);
   var cell3;
-  var functionflag=0;
-  functionflag= document.getElementById('functionflag').value;
-  document.ge
-  if(functionflag==1){
+  //var functionflag=0;
+  //functionflag= document.getElementById('functionflag').value;
+ 
+  if(Value==6){
    cell3=row.insertCell(2);
    var xhttpdepartment=new XMLHttpRequest(); 
    xhttpdepartment.onreadystatechange=function() {
