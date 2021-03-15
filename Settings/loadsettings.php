@@ -38,7 +38,7 @@ while($row=$result->fetch_assoc()){
     echo "<tr>";
     echo "<td><input type='checkbox', name='engdecctext'/></td>";
     echo "<td>".$row["code"]."</td>";
-    echo "<td>".$row["related_code"]."</td>";
+    echo "<td>".$row["get_code_setup_name(related_code)"]."</td>";
     echo "<td>".$row["english_description"]."</td>";
     echo "<td>".$row["Arabic_description"]."</td>";
     echo "</tr>";
