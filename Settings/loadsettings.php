@@ -24,15 +24,15 @@ if($conn->connect_error){
  else{
 
     if(isset($_POST['code'])){
-$code=$_POST['code'];
+$codetype=$_POST['code'];
 $functionflag=$_POST['functionflag'];
-$sql = "select code,get_code_setup_name(related_code),related_code,english_description,Arabic_description from code_setup WHERE code_type='$code'";
+$sql = "select code,get_code_setup_name(related_code),related_code,english_description,Arabic_description from code_setup WHERE code_type='$codetype'";
 
 $result=$conn->query($sql);
 if ($result == TRUE) {
     
     if( $result->num_rows>0){
-if($code==6){
+if($codetype==6){
 while($row=$result->fetch_assoc()){
    
     echo "<tr>";
