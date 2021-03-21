@@ -12,7 +12,7 @@ $host="localhost";
 $user="root";
 $passwd="MyadminMe87";
 $database="hrme";
-$flag=0;
+$codetype=0;
 
 //create connection
 $conn=new mysqli($host,$user,$passwd,$database);
@@ -23,15 +23,20 @@ if($conn->connect_error){
 
  else{
 
-$sql = "select english_description from code_setup WHERE code_type='1'";
+if(isset($_POST['data'])){
+
+
+    
+$codetype=$_POST['data'];
+$sql = "select english_description from code_setup WHERE code_type='$codetype'";
 
 $result=$conn->query($sql);
 if ($result == TRUE) {
     
     if( $result->num_rows>0){
 
-    //  echo "<select name='function'>";  
-     
+    
+     echo "<option value='0' selected>"."Choose"."</option>";     
 while($row=$result->fetch_assoc()){
    
    
@@ -43,8 +48,13 @@ while($row=$result->fetch_assoc()){
    
 
 }
-//echo "</select>";
+
 }
+}
+ }
+ else{
+
+    echo "<option value='1'>"."error"."</option>";
 }
     
  }
