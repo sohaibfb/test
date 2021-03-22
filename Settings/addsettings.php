@@ -81,6 +81,9 @@ if($functionresult==true){
     case 7 :
       header("Location:/test/settings/mastersettings/structuresettings/Locations.html");
       break;
+      case 8 :
+        header("Location:/test/settings/mastersettings/financialsettings/Allowances.html");
+        break;
    }
    }
  

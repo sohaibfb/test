@@ -28,7 +28,14 @@ if(isset($_POST['data'])){
 
     
 $codetype=$_POST['data'];
-$sql = "select english_description from code_setup WHERE code_type='$codetype'";
+$code=$_POST['code'];
+if($codetype==6){
+    $sql = "select code,english_description from code_setup WHERE code_type='$codetype' and related_code='$code'";
+
+}
+else{
+$sql = "select code,english_description from code_setup WHERE code_type='$codetype'";
+}
 
 $result=$conn->query($sql);
 if ($result == TRUE) {
@@ -41,7 +48,7 @@ while($row=$result->fetch_assoc()){
    
    
 
-    echo "<option value='".$row['english_description']."'>".$row['english_description']."</option>";
+    echo "<option value='".$row['code']."'>".$row['english_description']."</option>";
     
 
    

@@ -21,25 +21,31 @@
    //   }
 
       $(document).ready(function () {
-        loadpagesettings("1",loadnationality);
-        loadpagesettings("2",loadreligion);
-        loadpagesettings("3",loadhomecountry);
-        loadpagesettings("4",loadposition);
-        loadpagesettings("5",loadfunction);
-        loadpagesettings("6",loadsection);
-        loadpagesettings("7",loadlocation);
+        
+        loadpagesettings("1",0,loadnationality);
+        loadpagesettings("2",0,loadreligion);
+        loadpagesettings("3",0,loadhomecountry);
+        loadpagesettings("4",0,loadposition);
+        loadpagesettings("5",0,loadfunction);
+        //loadpagesettings("0",0,loadsection);
+        loadpagesettings("7",0,loadlocation);
+        $("#Function").change(function (e) {
+          loadpagesettings("6",$("#Function").val(),loadsection); 
+          e.preventDefault();
+          
+          
+        });
         
   
         
           
       });
 
-      function loadpagesettings(codetype,loadfunction){
-        var Rcodetype;
+      function loadpagesettings(codetype,code,loadfunction){
         $.ajax({
           type: "POST",
           url: "loademployeesettings.php",
-          data: {"data":codetype},
+          data: {"data":codetype,"code":code},
           success:   function (response) {
             loadfunction(response);
              
