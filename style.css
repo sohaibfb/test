@@ -297,6 +297,10 @@ width: 120px;
 	/*background: #FFFFFF;*/
 	/*width: 20%;*/
 }
+input[type=submit]{
+
+    background: url('images/save.jpg')
+}
 
 
 
