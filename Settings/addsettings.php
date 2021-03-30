@@ -16,7 +16,7 @@ if($conn->connect_error){
 
   
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit_x'])){
 
 
  $engdesc=$_POST['engdesctext'];

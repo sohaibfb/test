@@ -254,11 +254,15 @@ flex-direction: row;
     font-weight: bold;
 
 }
-.actionbarr{
-     float: left;
-     display: inline;
-    margin:16px;
-    padding: 8px;
+.actionbar{
+     display: flex;
+     width: 10%;
+
+}
+.actionbarcolumn{
+
+    flex:50%;
+
 
 }
 
