@@ -42,3 +42,5 @@ var myButton = function (_React$Component) {
 
 var domContainer = document.getElementById('reacttest');
 ReactDOM.render(e(myButton), domContainer);
+
+
